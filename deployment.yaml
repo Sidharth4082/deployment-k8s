@@ -19,17 +19,4 @@ spec:
          image: in28min/hello-world-python:0.0.1.RELEASE
          ports:
           - containerPort: 80
-
-... 
-apiVersion: v1 
-kind: Service
-metadata:
- name: python-service
-spec:
-  type: LoadBalancer
-  ports:
-    - protocol: TCP
-      port: 80
-      targetPort: 80
-  selector:
-    python
+          
